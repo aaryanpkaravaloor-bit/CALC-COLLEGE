@@ -481,7 +481,8 @@ Create a student product that feels:
 
 - https://github.com/user-attachments/assets/e4655021-00c5-45e2-b6b0-9461646257c8
 - <img width="960" height="478" alt="Calc" src="https://github.com/user-attachments/assets/3bffc8d2-fc59-434d-85b7-60e16483ed1a" />
-
+-----OR-------
+  Use this " https://agent-6a045b1f51e5d63c7e42589c--calc-college000.netlify.app/ " url in your browser to See the project.
 
 ---
 
