@@ -237,6 +237,8 @@ Create a student product that feels:
 
 # Images generation for the project:
 - Use Google nano banana to create images for the project.
+- ![Alt text](images/logo.png)
+- ![Alt text](images/index.png)
 
 ---
 
