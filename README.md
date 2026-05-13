@@ -1,4 +1,4 @@
-# CALC-COLLEGE
+<img width="1408" height="768" alt="logo" src="https://github.com/user-attachments/assets/c2f0db07-ca27-48b8-80c0-a57de6941793" /># CALC-COLLEGE
 This is web site for calculate the CGPA, Attendance , etc. 
 Which is for college students. It is a simple and easy to use web app that helps students to calculate their CGPA, Attendance, etc. It is a free and open source project that anyone can contribute to.
 
@@ -233,12 +233,17 @@ Create a student product that feels:
 - You should now see the CALC-College web app running locally on your machine.
 - And you can also do it in your mobile phone by opening the `main.html` file in your mobile browser.
 
+- https://github.com/user-attachments/assets/e4655021-00c5-45e2-b6b0-9461646257c8
+- <img width="960" height="478" alt="Calc" src="https://github.com/user-attachments/assets/3bffc8d2-fc59-434d-85b7-60e16483ed1a" />
+
+
 ---
 
 # Images generation for the project:
 - Use Google nano banana to create images for the project.
-- ![Alt text](images/logo.png)
-- ![Alt text](images/index.png)
+- <img width="1408" height="768" alt="logo" src="https://github.com/user-attachments/assets/45856a48-2e35-417d-86ef-156facf63337" />
+- <img width="1376" height="768" alt="index" src="https://github.com/user-attachments/assets/18bbcfde-5ec7-42ae-8df3-fd8fcef1969a" />
+
 
 ---
 
