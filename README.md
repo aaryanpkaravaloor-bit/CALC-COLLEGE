@@ -242,3 +242,4 @@ Create a student product that feels:
 
 # The Logic build with both AI and Hand Coded:
 - For the logic of the project, I use ChatGPT to generate the logic for the calculators in JS and I improve and alternate the logic to make it more efficient, optimized, and add some additional features for the project.
+logo.png
