@@ -13,6 +13,13 @@ A lightweight student utility platform for:
 - College students
 
 ---
+# Story 
+When I get my mark result, And teacher tell me calculate my CGPA, and Grade and i don't know how it calculate it.
+I searched on google, after searching a few min, finaly I find a CGPA calculater.
+But it has only one function on it(To calculate the CGPA).
+And I was obsessed with How can I make this kind of web with more features.
+That way I was drive into making this website.
+---
 
 Build a:
 - fast
