@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="style.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config={
+                theme:{
+                    extend:{
+                        colors:{
+                            bg: '#271a31',
+                            card: '#1e293a',
+                            accent: '#FF6F61',
+                            neon: '#e914f1d1',
+                            text: '#df6a3f'
+                        },
+                        fontfamily:{
+                            sans:['Poppins', 'sans-serif'],
+                            orbitron:['Orbitron', 'monospace']
+                        }
+                    }
+                }
+            }
+        </script>
+        <img src="index.png" alt="CALC-College-index" style="max-width:100%; height:auto;">
+        <title>CALC-College</title>
+    </head>
+    <body class="bg-bg text-text font-sans min-h-screen ">
+
+        <!--Navigation -->
+        <nav>
+            <div class="container max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+                <div class="flex items-center gap-4">
+                    <span><img src="logo.png" alt="CALC-College Logo" class="h-10 w-10"/></span>
+                    <span class="text-3xl font-orbitron text-accent tracking-wide"><strong>CALC-College</strong></span>
+                </div>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">Home</a></li>
+                    <li><a href="#attendance" class="hover:text-accent transition-colors duration-300">Attendance</a></li>
+                    <li><a href="#internal" class="hover:text-accent transition-colors duration-300">Internal Marks</a></li>
+                    <li><a href="#cgpa" class="hover:text-accent transition-colors duration-300">CGPA</a></li>
+                    <li><a href="#countdown" class="hover:text-accent transition-colors duration-300">Countdown</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Main Content -->
+        <header class="container mx-auto text-center py-12 px-4 mt-24">
+            <h1 class="md:text-7xl font-orbitron mb-4"><b>Welcome to CALC College</b></h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 mx-auto max-w-2xl">Your ultimate Attendance, Internal marks, and CGPA calculator for academic success!</p>
+            <a href="#calculator" class="inline-block bg-accent text-white px-6 py-3 rounded-full hover:bg-red-900 text-bg font-semibold round-lg transition-all shadow-lg shadow-accent/30 duration-300">Get Start CALC</a>
+        </header>
+
+         <!--Grid Preview-->
+        <section id="calculator" class="px5 py-8 max-w-5xl mx-auto mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                <div class="bg-card p-6 rounded-lg shadow-lg shadow-accent/30">
+                    <h2 class="text-2xl font-orbitron text-accent mb-4">Attendance Calculator</h2>
+                    <p class="text-gray-300 mb-6">Calculate your attendance percentage and find out how many classes you can afford to miss while maintaining a good attendance record.</p>
+                    <a href="#attendance" class="inline-block bg-accent text-white px-4 py-2 rounded-full hover:bg-red-900 text-bg font-semibold transition-all shadow-lg shadow-accent/30 duration-300">Go to Attendance Calculator</a>
+                </div>
+                <div class="bg-card p-6 rounded-lg shadow-lg shadow-accent/30">
+                    <h2 class="text-2xl font-orbitron text-accent mb-4">Internal Marks Calculator</h2>
+                    <p class="text-gray-300 mb-6">Easily calculate your internal marks based on your scores and the weightage of each component.<br></br></p>
+                    <a href="#internal" class="inline-block bg-accent text-white px-4 py-2 rounded-full hover:bg-red-900 text-bg font-semibold transition-all shadow-lg shadow-accent/30 duration-300">Go to Internal Marks Calculator</a>
+                </div>
+                <div class="bg-card p-6 rounded-lg shadow-lg shadow-accent/30">
+                    <h2 class="text-2xl font-orbitron text-accent mb-4">CGPA Calculator</h2>
+                    <p class="text-gray-300 mb-6">Calculate your CGPA based on your grades and credit hours for each course.<br></br></p>
+                    <a href="#cgpa" class="inline-block bg-accent text-white px-4 py-2 rounded-full hover:bg-red-900 text-bg font-semibold transition-all shadow-lg shadow-accent/30 duration-300">Go to CGPA Calculator</a>
+                </div>
+                <div class="bg-card p-6 rounded-lg shadow-lg shadow-accent/30">
+                    <h2 class="text-2xl font-orbitron text-accent mb-4">Exam Countdown</h2>
+                    <p class="text-gray-300 mb-6">Track your exam schedule and stay updated with important dates and deadlines.</p>
+                    <a href="#countdown" class="inline-block bg-accent text-white px-4 py-2 rounded-full hover:bg-red-900 text-bg font-semibold transition-all shadow-lg shadow-accent/30 duration-300">Open Countdown</a>
+                </div>
+            </div>
+
+            <!--CALC Calculation-->
+          
+            <!--Attendance-->
+                <div class="card p-6 mb-8" id="attendance">
+                    <h2 class="text-2xl font-orbitron text-accent mb-4">Attendance Calculator</h2>
+                    <div class="grid grid-cols1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm mb-1">Total Classes</label>
+                            <input type="number" id="att-total" class="input-field" placeholder="e.g., 100" min="1">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-1">Attended Classes</label>
+                            <input type="number" id="att-attended" class="input-field" placeholder="e.g., 75" min="0">
+                        </div>
+                    </div>
+                    <button onclick="calcAttendance()" id="calc-attendance" class="btn-primary mt-4">Calculate Attendance</button>
+					<div id="attendanceResult" class="result-box" style="display:none; margin-top:10px; padding:8px; background: #500f7b; border-radius:4px;"></div>
+                </div>
+            
+            <!--Internal marks-->
+        
+                <div class="card p-6 mb-8" id="internal">
+                    <h2 class="font-orbitron text-2xl mb-4 text-accent">Internal Mark Predictor</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-sm mb-1">Assignment Marks (/20)</label>
+                            <input type="number" id="int-assign" class="input-field" placeholder="e.g., 18" min="0" max="20">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-1">Series Exam (/50)</label>
+                            <input type="number" id="int-series" class="input-field" placeholder="e.g., 55" min="0" max="50">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-1">Attendance Score (/10)</label>
+                            <input type="number" id="int-att" class="input-field" placeholder="e.g., 9" min="0" max="10">
+                        </div>
+                    </div>
+                    <button onclick="calcInternal()" id="calc-internal" class="btn-primary mt-4">Predict Marks</button>
+					<div id="internalResult" class="result-box" style="display:none; margin-top:10px; padding:8px; background: #54139f; border-radius:4px;"></div>
+                </div>
+
+            <!--CGPA Calculator-->
+                
+                 <div class="card p-6 mb-8" id="cgpa">
+                    <h2 class="font-orbitron text-2xl mb-4 text-accent">CGPA Calculator</h2>
+                    <p class="text-sm text-gray-400 mb-4">Add subjects dynamically:</p>
+                    <div id="cgpa-subjects">
+                        <div class="subject-row grid grid-cols-2 gap-3 mb-2">
+                            <input type="number" class="input-field" placeholder="Grade Point" step="0.1" min="0" max="10">
+                            <input type="number" class="input-field" placeholder="Credits" min="1">
+                        </div>
+                    </div>
+                    <button onclick="addSubjectRow()" class="btn-secondary text-sm mb-4">+ Add Subject</button>
+                    <button onclick="calculateCGPA()" id="calc-cgpa" class="btn-primary">Calculate CGPA</button>
+					<div id="cgpaResult" class="result-box" style="display:none; margin-top:10px; padding:8px; background: #4d25eb; border-radius:4px;"></div>
+                </div>
+            <!--Countdown-->
+        
+                <div class="card p-6 mb-8" id="countdown">
+                    <h2 class="font-orbitron text-2xl mb-4 text-accent">Exam Countdown</h2>
+                    <label class="block text-sm mb-1">Select Exam Date:</label>
+                    <input type="date" id="exam-date" class="input-field w-full mb-4">
+                    <button onclick="calcCountdown()" id="calc-countdown" class="btn-primary">Days Left</button>
+					<div id="countdowResult" class="result-box" style="display:none; margin-top:10px; padding:8px; border-radius:6px;"> Days Left for Exam: <span id="daysCount">----</span></div>
+					<div id="globalCalculationResults" class="result-box" style="display:none; margin-top:15px; padding:10px; background: #6a12b8; border-radius:6px;"></div>
+                </div>                    
+        </section>
+
+        <!-- Result -->
+
+        <div id="result-page" class="result-overlay hidden">
+			<div class="result-card">
+				<button id="close-result" class="close-btn" aria-label="Close">&times;</button>
+				<div id="result-content" class="result-content">
+				</div>
+				<div class="popup-actions">
+					<button class="popup-btn secondary" onclick="hideResultPopup()">Close</button>
+					<button class="popup-btn primary" onclick="syncGlobalResults(); hideResultPopup();">Save to Device</button>
+				</div>
+			</div>
+		</div>
+
+         <!-- Footer -->
+            <footer class="bg-card text-center py-6 mt-12">
+                <p class="text-sm text-gray-400">2026 CALC College. All rights reserved.</p>
+            </footer>
+
+		<script>
+    //Attendance
+			function calcAttendance() {
+				const total = parseFloat(document.getElementById('att-total').value);
+				const attended = parseFloat(document.getElementById('att-attended').value);
+				const res = document.getElementById('attendanceResult');
+
+				if (isNaN(total) || isNaN(attended) || total <= 0) {
+					res.innerHTML = 'Enter valid numbers.';
+					res.style.display = 'block';
+					res.classList.remove('hidden');
+					return;
+				}
+				const pct = ((attended / total) * 100).toFixed(2);
+				const threshold = 75;
+				const required = Math.ceil((threshold / 100) * total);
+				const canMiss = Math.max(0, required - attended);
+
+				showResultPopup('Attendance Result', `
+					<div class="result-stat">
+						<span class="label">Current Attendance on Classes:</span>
+						<span class="value"><strong>${pct}%</strong></span>
+					</div>
+					<div class="result-stat">
+						<span class="label">Classes You Missed:</span>
+						<span class="value highlight">${canMiss} classes</span>
+					</div>
+					<div class="result-stat">
+						<span class="label">Target (${threshold}%):</span>
+						<span class="value">${required} attended / ${total} total</span>
+					</div>
+				`);
+        
+				syncGlobalResults();
+			}
+
+    //Internal
+			function calcInternal() {
+				const assign = parseFloat(document.getElementById('int-assign').value) || 0;
+				const series = parseFloat(document.getElementById('int-series').value) || 0;
+				const att = parseFloat(document.getElementById('int-att').value) || 0;
+				const total = assign + series + att;
+				const res = document.getElementById('internalResult');
+
+				showResultPopup('Internal Marks Result', `
+					<div class="result-stat">
+						<span class="label">Assignment (/20):</span>
+						<span class="value">${assign}/20</span>
+					</div>
+					<div class="result-stat">
+						<span class="label">Series Exam (/50):</span>
+						<span class="value">${series}/50</span>
+					</div>
+					<div class="result-stat">
+						<span class="label">Attendance (/10):</span>
+						<span class="value">${att}/10</span>
+					</div>
+					<hr class="result-divider">
+					<div class="result-stat">
+						<span class="label">Total:</span>
+						<span class="value highlight">${total.toFixed(1)} / 80</span>
+					</div>
+				`);
+			
+				syncGlobalResults();
+			}
+
+    //Countdown
+			function calcCountdown() {
+				const dateVal = document.getElementById('exam-date').value;
+				const daysSpan = document.getElementById('daysCount');
+				const resBox = document.getElementById('countdownResult');
+
+				if (!dateVal) {
+					if (daysSpan) daysSpan.textContent = 'Select a date';
+					if (resBox) {
+						resBox.innerHTML = 'Select a date';
+						resBox.style.display = 'block';
+						resBox.classList.remove('hidden');
+					}
+					return;
+				}
+				const examDate = new Date(dateVal);
+				const today = new Date();
+				today.setHours(0,0,0,0);
+				const diffTime = examDate - today;
+				const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+	
+				const resultText = diffDays >= 0 ? `${diffDays} Days` : 'Date Passed';
+			
+				if (daysSpan) daysSpan.textContent = diffDays >= 0 ? diffDays + ' Days' : 'Date Passed';
+
+				showResultPopup('Exam Countdown', `
+					<div class="result-stat">
+						<span class="label">Exam Date:</span>
+						<span class="value">${examDate.toLocaleDateString()}</span>
+					</div>
+					<div class="result-stat">
+						<span class="label">Days Remaining:</span>
+						<span class="value highlight">${resultText}</span>
+					</div>
+				`);
+        
+				syncGlobalResults();
+			}
+
+    //CGPA
+			function addSubjectRow() {
+				const container = document.getElementById('cgpa-subjects');
+				const row = document.createElement('div');
+				row.className = 'subject-row grid grid-cols-2 gap-3 mb-2';
+				row.innerHTML = `
+					<input type="number" class="input-field" placeholder="Grade Point" step="0.1" min="0" max="10">
+					<input type="number" class="input-field" placeholder="Credits" min="1">
+				`;
+				container.appendChild(row);
+			}
+
+			function calculateCGPA() {
+				const rows = document.querySelectorAll('#cgpa-subjects .subject-row');
+				let totalPoints = 0, totalCredits = 0;
+				let tableHTML = `<table class="cgpa-table"><thead><tr><th>Grade Point</th><th>Credits</th><th>Points</th></tr></thead><tbody>`;
+
+				rows.forEach(row => {
+					const inputs = row.querySelectorAll('input');
+					const grade = parseFloat(inputs[0].value) || 0;
+					const credits = parseFloat(inputs[1].value) || 0;
+					if (credits > 0) {
+						const points = grade * credits;
+						totalPoints += points;
+						totalCredits += credits;
+						tableHTML += `<tr><td>${grade}</td><td>${credits}</td><td>${points.toFixed(2)}</td></tr>`;
+					}
+				});
+				tableHTML += `</tbody></table>`;
+
+				const cgpa = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : '0.00';
+        
+				let cgpaRes = document.getElementById('cgpaResult');
+				if (!cgpaRes) {
+					cgpaRes = document.createElement('div');
+					cgpaRes.id = 'cgpaResult';
+					cgpaRes.className = 'result-box';
+					cgpaRes.style.cssText = 'display:none; margin-top:10px; padding:8px; background:#dcfce7; border-radius:4px; color:#1e293b;';
+					document.getElementById('cgpa').appendChild(cgpaRes);
+				}
+        
+				
+				showResultPopup('CGPA Result', `
+					${tableHTML}
+					<hr class="result-divider">
+					<div class="result-stat total-row">
+						<span class="label">Calculated CGPA:</span>
+						<span class="value highlight">${cgpa}</span>
+					</div>
+					<div class="result-stat">
+						<span class="label">Total Credits:</span>
+						<span class="value">${totalCredits}</span>
+					</div>
+				`);
+        
+				syncGlobalResults();
+			}
+
+    //sync all results to global section
+			function syncGlobalResults() {
+				const global = document.getElementById('globalCalculationResults');
+				if (!global) return;
+        
+				const results = [
+					document.getElementById('attendanceResult')?.innerHTML,
+					document.getElementById('internalResult')?.innerHTML,
+					document.getElementById('countdownResult')?.innerHTML,
+					document.getElementById('cgpaResult')?.innerHTML
+				].filter(html => html && html.trim() !== '' && !html.includes('----'));
+        
+				if (results.length > 0) {
+					global.innerHTML = results.join('<hr class="result-divider">');
+					global.style.display = 'block';
+					global.classList.remove('hidden');
+				}
+			}
+
+			function showResultPopup(title, contentHTML) {
+				const overlay = document.getElementById('result-page');
+				const content = document.getElementById('result-content');
+				if (!overlay || !content) return;
+        
+				content.innerHTML = `<h2>${title}</h2>${contentHTML}`;
+				overlay.classList.remove('hidden');
+				overlay.onclick = (e) => {
+					if (e.target === overlay) hideResultPopup();
+				};
+			}
+
+			function hideResultPopup() {
+				const overlay = document.getElementById('result-page');
+				if (overlay) overlay.classList.add('hidden');
+			}
+
+			document.getElementById('close-result')?.addEventListener('click', hideResultPopup);
+
+			document.addEventListener('DOMContentLoaded', () => {
+				document.querySelectorAll('.result-box').forEach(box => {
+					box.style.display = 'none';
+				});
+			});
+		</script>
+
+    </body>
+</html>        

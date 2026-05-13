@@ -1,0 +1,420 @@
+MVP for CALC-College
+
+# Product Name
+
+## CALC College
+
+A lightweight student utility platform for:
+- Polytechnic students
+- Engineering students
+- College students
+
+---
+
+# MVP Goal
+
+Build a:
+- fast
+- both mobile and desktop
+- single-page
+- dark retro UI
+
+web app using:
+- HTML
+- CSS
+- JavaScript
+
+The MVP should solve daily student problems immediately.
+
+
+# MVP ESSENTIAL FEATURES
+
+## 1. Attendance Calculator
+### Purpose
+Helps students track attendance percentage.
+
+### Inputs
+- Total classes
+- Attended classes
+
+### Output
+- Attendance %
+- Classes needed for 75%
+
+---
+
+## 2. Internal Mark Predictor
+### Purpose
+Predict internal marks before exams.
+
+### Inputs
+- Assignment marks
+- Series exam marks
+- Attendance score
+
+### Output
+- Predicted internal mark
+
+---
+
+## 3. CGPA Calculator
+### Purpose
+Calculate GPA/CGPA quickly.
+
+### Inputs
+- Grade points
+- Credits
+
+### Output
+- GPA/CGPA
+
+---
+
+## 4. Exam Countdown
+### Purpose
+Shows remaining days for semester exam.
+
+### Inputs
+- Exam date
+
+### Output
+
+```text
+like "12 days remaining"
+```
+
+---
+
+# MVP NON-FEATURES (Build Later)
+
+Do NOT build these initially:
+- login system
+- backend
+- cloud sync
+- notes sharing
+- AI features
+- chat system
+
+Reason:
+Focus on shipping quickly.
+
+---
+
+# MVP TECH STACK
+
+| Layer | Technology |
+|---|---|
+| Structure | HTML |
+| Styling | CSS |
+| Logic | JavaScript |
+
+---
+
+# PROJECT STRUCTURE
+
+## only 2 Files Needed
+
+```plaintext
+CALC-College/
+│
+├── main.html
+└── style.css
+```
+
+JavaScript can stay inside:
+
+```html
+<script>
+</script>
+```
+
+inside `main.html`.
+
+---
+
+# UI DESIGN SYSTEM
+
+# Theme
+
+## Dark Retro Modern
+
+### Colors like:
+
+| Usage | Color |
+|---|---|
+| Background | #1e0f2a |
+| Card | #1e293b |
+| Accent | #f88238 |
+| Neon Glow | #fd7638 |
+| Text | #f8fafc |
+
+---
+
+# Font Recommendations
+
+Use:
+- Poppins
+- Inter
+- Orbitron (for titles)
+
+Example:
+
+```html: <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+css: <script src="https://cdn.tailwindcss.com"></script> and css fils
+```
+
+---
+
+# MVP PAGE STRUCTURE
+
+```plaintext
+Navbar
+↓
+Hero Section
+↓
+Feature Grid
+↓
+Attendance Calculator
+↓
+Internal Mark Predictor
+↓
+CGPA Calculator
+↓
+Exam Countdown
+↓
+Footer
+```
+
+---
+
+# RESPONSIVE DESIGN RULES
+
+## Mobile First
+
+Most users:
+- use phones
+- use low-speed internet
+
+So:
+- avoid heavy libraries
+- use medium layouts
+
+---
+
+# CORE COMPONENTS
+
+# 1. Navbar
+
+## Contains
+- logo
+- webapp name
+
+Simple sticky navbar.
+
+---
+
+# 2. Hero Section
+
+## Content
+
+```text
+CALC-College
+Student Productivity Toolkit
+```
+
+### CTA Button
+
+```text
+Start Calculating
+```
+
+---
+
+# 3. Feature Cards
+
+Each feature displayed as:
+- glowing card
+- icon
+- short description
+
+---
+
+# 4. Calculator Sections
+
+Every calculator contains:
+- title
+- inputs
+- calculate button
+- result box
+
+---
+
+# FUNCTIONAL LOGIC
+
+# Attendance Calculator Logic
+
+## Formula
+
+```js
+attendance = (attended / total) * 100;
+```
+
+---
+
+## Required Classes Formula
+
+```js
+needed =
+((0.75 * total) - attended) / 0.25;
+```
+
+---
+
+# Internal Mark Predictor Logic
+
+## Example Formula
+
+```js
+internal =
+(assignments * 0.2) +
+(series * 0.7) +
+(attendance * 0.1);
+```
+
+---
+
+# CGPA Logic
+
+```js
+cgpa =
+totalGradePoints / totalCredits;
+```
+
+---
+
+# Countdown Logic
+
+```js
+daysLeft =
+(examDate - today) / (1000*60*60*24);
+```
+
+---
+
+# MVP USER FLOW
+
+## Step 1
+User opens website.
+
+---
+
+## Step 2
+Chooses a calculator.
+
+---
+
+## Step 3
+Enters values.
+
+---
+
+## Step 4
+Gets instant result.
+
+---
+
+# MVP SUCCESS METRICS
+
+Your MVP is successful if:
+- students can use it without explanation
+- loads under 3 seconds
+- works smoothly on mobile
+- calculators feel accurate
+- UI feels modern
+
+---
+
+# DEVELOPMENT ROADMAP
+
+# Phase 1 — Setup
+### Time: 1 Day
+
+Tasks:
+- create files
+- build page layout
+- setup colors/fonts
+
+---
+
+# Phase 2 — UI Development
+### Time: 2 Days
+
+Tasks:
+- responsive cards
+- inputs/buttons
+- retro effects
+- animations
+
+---
+
+# Phase 3 — Calculator Logic
+### Time: 2 Days
+
+Tasks:
+- attendance logic
+- CGPA logic
+- internal marks logic
+- countdown logic
+
+---
+
+# Phase 4 — Polish
+### Time: 1 Day
+
+Tasks:
+- mobile optimization
+- bug fixing
+- hover effects
+- spacing improvements
+
+---
+
+# BEST PRACTICES
+
+## Keep UI to do not overload screen.
+
+---
+
+## Prioritize Speed
+Avoid frameworks initially.
+
+---
+
+## Use Reusable CSS
+
+```css
+.card{
+  background:#271a31;
+  border-radius:16px;
+}
+```
+
+---
+
+## Keep JavaScript Modular
+Separate functions:
+
+```js
+calculateAttendance()
+calculateCGPA()
+calculateInternal()
+```
+
+---
+
+## Goal
+Create a student product that feels:
+- real
+- polished
+- useful daily
+- fast and simple
