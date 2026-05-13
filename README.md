@@ -1,5 +1,6 @@
 # CALC-COLLEGE
 This is web site for calculate the CGPA, Attendance , etc.
+# CALC
 Which is for college students. It is a simple and easy to use web app that helps students to calculate their CGPA, Attendance, etc. It is a free and open source project that anyone can contribute to.
 
 # Product Name
@@ -494,4 +495,3 @@ Create a student product that feels:
 
 # The Logic build with both AI and Hand Coded:
 - For the logic of the project, I use ChatGPT to generate the logic for the calculators in JS and I improve and alternate the logic to make it more efficient, optimized, and add some additional features for the project.
->>>>>>> 071dc17abb2ed3b74817e09bd95fc0cdd1df2cc4
