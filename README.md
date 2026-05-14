@@ -80,18 +80,16 @@ like "8 days remaining"
 
 | Layer | Technology |
 |---|---|
-| Structure: HTML |
-| Styling: CSS |
-| Logic: JavaScript |
+| Structure| HTML |
+| Styling| CSS |
+| Logic| JavaScript |
 
 # PROJECT STRUCTURE
 
-# under 3 Files
+# Only 2 Files
 
-Plaintext:
-CALC-College/
-├── main.html
-└── style.css
+CALC-College/ main.html 
+              style.css
 
 # UI DESIGN SYSTEM
 
