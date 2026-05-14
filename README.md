@@ -95,15 +95,13 @@ CALC-College/ main.html
 
 # Theme
 
-# Dark Retro Modern
-
 # Colors like:
 | Usage | Color |
 |---|---|
-| Background: #220f2a |
-| Card: #1e293b |
-| Accent: #f89838 |
-| Text: #f58f28 |
+| Background| #220f2a |
+| Card| #1e293b |
+| Accent| #f89838 |
+| Text| #f58f28 |
 
 # PAGE STRUCTURE
 
@@ -170,14 +168,13 @@ Create a student product that feels:
 
 - https://github.com/user-attachments/assets/e4655021-00c5-45e2-b6b0-9461646257c8
 - <img width="960" height="478" alt="Calc" src="https://github.com/user-attachments/assets/3bffc8d2-fc59-434d-85b7-60e16483ed1a" />
------OR-------
-  Use this " https://agent-6a045b1f51e5d63c7e42589c--calc-college000.netlify.app/ " url in your browser to See the project.
+# ----OR-------
+Use this " https://agent-6a045b1f51e5d63c7e42589c--calc-college000.netlify.app/ " url in your browser to See the project.
 
 # Images generation for the project:
 - Use Google nano banana to create images for the project.
 - <img width="1408" height="768" alt="logo" src="https://github.com/user-attachments/assets/45856a48-2e35-417d-86ef-156facf63337" />
 - <img width="1376" height="768" alt="index" src="https://github.com/user-attachments/assets/18bbcfde-5ec7-42ae-8df3-fd8fcef1969a" />
-
 
 # The Logic build with both AI and Hand Coded:
 - For basic logic of the project, I use ChatGPT to generate the logic for the calculators in JS and I improve and alternate the logic to make it more efficient, optimized, and add some additional features for the project.
